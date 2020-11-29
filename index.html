@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./2.png">
+  <title>ADNY</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: whitesmoke;
+      /* color: black; */
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      /* justify-content: center; */
+      align-items: center;
+      flex-direction: column;
+      background-image: url('./1.png');
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center top;
+    }
+
+    header {
+      width: 100%;
+      /* background-color: #fba; */
+      height: 15vh;
+    }
+
+    header section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 30px;
+      height: 15vh;
+    }
+
+    input {
+      width: 400px;
+      margin-left: 30px;
+      /* font-size: 30px; */
+      padding: 5px 5px;
+      border-radius: 20px;
+      border: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    footer {
+      font-size: 10px;
+      /* background: #abf; */
+      width: 100%;
+      height: 10vh;
+    }
+
+    .acti {
+      /* background: #bfa; */
+      height: 75vh;
+      width: 100%;
+      display: flex;
+      /* justify-content: space-around; */
+    }
+    li input{
+      width: 50px;
+    }
+    .left{
+       width: 50vw;
+       /* margin-left: 10vh; */
+    }
+    .right{
+      width: 50vw;
+    }
+    span{
+      margin-left: 40vh;
+    }
+    svg{
+      width: 20px;
+      height: 20px;
+      color: white;
+    }
+    ol li{
+      width: 500px;
+      height: 30px;
+      /* background: lightpink; */
+      border-radius: 50px;
+
+      margin: 20px;
+      display: flex;
+      /* justify-content: space-evenly; */
+      align-items: center;
+    }
+    ul{
+      margin-left: 7vw;
+    }
+    li{
+      position: relative;
+      cursor: pointer;
+    }
+    input[type="checkbox"]{
+      /* visibility: hidden; */
+      width: 20px;
+      height: 20px;
+    }
+    
+    /* li label{
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+    } */
+    ul li{
+      width: 500px;
+      height: 30px;
+      background: lightpink;
+      border-radius: 50px;
+      margin: 20px;
+      display: flex;
+      /* justify-content: space-evenly; */
+      align-items: center;
+    }
+    li p{
+      width: 200px;
+      margin-left: 5vh;
+    }
+    h2{
+      margin-left: 10vw;
+    }
+    .acti a{
+      position: absolute;
+      right: 5vh;
+      color: white;
+    }
+    footer{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    }
+    footer a{
+      text-decoration: none;
+      letter-spacing: 2px;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section>
+      <label for="title">每日任务</label>
+      <input type="text" name="" id="title" placeholder="每日任务你填就完事了" required>
+    </section>
+  </header>
+  <section class="acti">
+    <div class="left">
+      <h2>正在进行<span id="toDoCount"></span></h2>
+      <ol id="toDoList" class="demo-box"></ol>
+    </div>
+    <div class="right">
+      <h2>已经完成 <span id="doneCount"></span></h2>
+      <ul id="doneList"></ul>
+    </div>
+  </section>
+  <footer>
+    <a href="https://github.com/ErKeLost">https://github.com/ErKeLost</a> <p>@copy 2020 ERKELOST ADNY</p>
+  </footer>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./todolist.js"></script>
+</body>
+
+</html>
